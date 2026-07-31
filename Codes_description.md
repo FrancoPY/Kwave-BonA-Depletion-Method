@@ -26,25 +26,25 @@ Las rutas de las carpetas están definidas según la estructura de carpetas de m
 **En `generateDensityMap.m`:**
 ```matlab
 outputDir = fullfile(pwd, 'densityMaps', sample);
-pwd toma automáticamente la carpeta desde donde se ejecuta el script en MATLAB, por lo que basta con ubicarse (cd) en la carpeta del proyecto antes de correrlo.
+% pwd toma automáticamente la carpeta desde donde se ejecuta el script en MATLAB, por lo que basta con ubicarse (cd) en la carpeta del proyecto antes de correrlo.
 ```
 En simulateBgnd6_copia.m y simulateInc9_copia.m:
 ```matlab
 densityDir = fullfile(pwd, 'densityMaps', sample);
 outputDir  = fullfile(pwd, 'TAREA_v2', sample, probe, freqStr, 'rf');
-Igual que el caso anterior, dependen de pwd, así que solo hay que asegurarse de correr el script desde la carpeta raíz del proyecto.
+% Igual que el caso anterior, dependen de pwd, así que solo hay que asegurarse de correr el script desde la carpeta raíz del proyecto.
 ```
 En beamform_to_bf.m:
 ```matlab
 baseDir = 'C:\Users\FRANCO PERALTA\Documents\MATLAB\LIM\TAREA_v2';
-Esta ruta es absoluta y debe reemplazarse por la ruta local de cada computadora, por ejemplo:
+% Esta ruta es absoluta y debe reemplazarse por la ruta local de cada computadora, por ejemplo:
 baseDir = 'C:\Users\NombreDeUsuario\Ruta\Del\Proyecto\TAREA_v2';
 ```
 En BA_COMPUTE_DM_FINAL.m:
 ```matlab
 refDir = 'C:\Users\FRANCO PERALTA\Documents\MATLAB\LIM\TAREA_v2\Phantom_homo_BA6_Steering15_v2\L14-5u\7MHz\bf';
 samDir = 'C:\Users\FRANCO PERALTA\Documents\MATLAB\LIM\TAREA_v2\Phantom_inc_BA11_Steering15_v2\L14-5u\7MHz\bf';
-Estas dos rutas también son absolutas y deben actualizarse según la ubicación del proyecto en cada computadora, por ejemplo:
+% Estas dos rutas también son absolutas y deben actualizarse según la ubicación del proyecto en cada computadora, por ejemplo:
 refDir = 'C:\Users\NombreDeUsuario\Ruta\Del\Proyecto\TAREA_v2\Phantom_homo_BA6_Steering15_v2\L14-5u\7MHz\bf';
 samDir = 'C:\Users\NombreDeUsuario\Ruta\Del\Proyecto\TAREA_v2\Phantom_inc_BA11_Steering15_v2\L14-5u\7MHz\bf';
 ```
@@ -55,9 +55,9 @@ Los scripts de simulación (`simulateBgnd6_copia.m`, `simulateInc9_copia.m`) uti
 ```matlab
 dataCast = 'gpuArray-single';
 
-lo cual acelera la simulación mediante una GPU NVIDIA compatible con CUDA. Si la computadora en la que se ejecutará el código no cuenta con GPU NVIDIA, esta línea debe modificarse a:
+% lo cual acelera la simulación mediante una GPU NVIDIA compatible con CUDA. Si la computadora en la que se ejecutará el código no cuenta con GPU NVIDIA, esta línea debe modificarse a:
 
 dataCast = 'single';
 
-para que la simulación se ejecute en CPU (el tiempo de cómputo será considerablemente mayor).
+% para que la simulación se ejecute en CPU (el tiempo de cómputo será considerablemente mayor).
 ```
