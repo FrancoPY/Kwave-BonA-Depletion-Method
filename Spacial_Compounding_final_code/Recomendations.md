@@ -12,13 +12,10 @@ Esto es necesario porque todos los scripts guardan y leen archivos usando rutas 
 
 El script generateDensityMap.m debe ejecutarse tres veces, una por cada phantom, cambiando manualmente el valor de la variable sample (línea 3 del script) antes de cada ejecución, de la siguiente manera:
 
-Primera ejecución:
 sample = 'Phantom_homo_BA6_v3';
 
-Segunda ejecución:
 sample = 'Phantom_inc_BA9_bg6_v3';
 
-Tercera ejecución:
 sample = 'Phantom_inc_BA11_bg6_v3';
 
 
