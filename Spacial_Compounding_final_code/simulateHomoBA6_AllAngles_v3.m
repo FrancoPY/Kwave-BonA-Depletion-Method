@@ -41,7 +41,7 @@ kgrid.makeTime(c0, [], tEnd);
 toneBurstCycles = 10;
 toneBurstFreq   = f0;
 
-% Barrido de ángulos de steering: -15 a 15 grados, paso 1 grado
+% ángulos de steering: -15 a 15 grados, paso 1 grado
 steeringAngles = -15:1:15;
 
 % Probe
